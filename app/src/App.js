@@ -21,7 +21,7 @@ class App extends React.Component {
 	render () {
 		const styleSidebar = {
 			width: '300px',
-			backgroundColor: '#ccc',
+			backgroundColor: 'red',
 			float: 'left'
 		}
 		const styleContent = {
