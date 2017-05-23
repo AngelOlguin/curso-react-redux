@@ -22,7 +22,8 @@ class App extends React.Component {
 		const styleSidebar = {
 			width: '300px',
 			backgroundColor: 'red',
-			float: 'left'
+			float: 'left',
+			borderRadius: '40px'
 		}
 		const styleContent = {
 			width: '500px',
