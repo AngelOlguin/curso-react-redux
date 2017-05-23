@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Link }  from 'react-router-dom';
-
+import Item from './components/Item.js';
 
 
 class App extends React.Component {
@@ -51,7 +51,7 @@ class App extends React.Component {
 						<h1> Detalle </h1>
 						<Route path="/g/:gistId" render={({match}) => {
 							let item = gists.find(g => g.id === match.params.gistId)
-							return<div> <h1> {item.id} </h1>	<h2> {item.created_at} </h2></div>
+							return (<Item action={item}/>)
 						}} />
 					</div>
 				</div>
