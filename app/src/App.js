@@ -21,13 +21,14 @@ class App extends React.Component {
 	render () {
 		const styleSidebar = {
 			width: '300px',
-			backgroundColor: 'red',
+			backgroundColor: 'yellow',
 			float: 'left',
 			borderRadius: '40px'
 		}
 		const styleContent = {
 			width: '500px',
-			float: 'left'
+			float: 'left',
+			backgroundColor: 'blue'
 		}
 		const { gists } = this.state;
 		return (
@@ -49,7 +50,8 @@ class App extends React.Component {
 					<div style={styleContent}>
 						<h1> Detalle </h1>
 						<Route path="/g/:gistId" render={({match}) => {
-							return <h1> {gists.find(g => g.id === match.params.gistId).id} </h1>
+							let item = gists.find(g => g.id === match.params.gistId)
+							return<div> <h1> {item.id} </h1>	<h2> {item.created_at} </h2></div>
 						}} />
 					</div>
 				</div>
